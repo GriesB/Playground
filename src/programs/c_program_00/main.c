@@ -5,6 +5,7 @@
 // History:
 //
 // 2025/03/07: GriesB -- first version -- didn't work
+//                    -- second version -- works
 // ..
 // --------------------------------------------------------------------------------
 
@@ -76,6 +77,25 @@ int main(int argc, char **argv)
 
   for(int8_t count = 0; count < 10; count++) {
     printf("%d \n", array[count]);
+  }
+
+  printf("Version 2:\n");
+
+  int32_t array2[10] = {1, 653, 2, 34, 546, 3, 76, 34, 876, 65};
+
+  for (int8_t count = 1; array2[count] <= array2[count ++]; count++) { 
+    for (int8_t counting = 0; counting <= 0; counting ++) { 
+      if (array2[counting] <= array2[counting ++]) {
+        break;
+      } else {
+        Zwischenspeicher = array2[counting];
+        array2[counting] = array2[counting++];
+        array2[counting++] = Zwischenspeicher;
+      }
+    }
+  }
+  for(int8_t count = 0; count < 10; count++) {
+    printf("%d \n", array2[count]);
   }
 }
 

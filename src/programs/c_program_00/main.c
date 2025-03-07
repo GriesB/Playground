@@ -13,7 +13,7 @@
 
 int32_t compare(int32_t a, int32_t b)
 {
-  if (a > b)
+  if (a < b)
   {
     return 1; // TRUE
   }
@@ -46,7 +46,7 @@ int32_t check(int32_t array[10])
 
 int main(int argc, char **argv)
 {
-  int32_t array[10] = {1, 5, 3, 45, 7, 4, 12, 56, 98, 46};
+  int32_t array[10] = {1, 34, 3, 45, 7, 4, 12, 8, 77, 32};
   int32_t Zwischenspeicher = 0;
   int32_t positionx = 0;
   int32_t positiony = 1;
@@ -55,7 +55,7 @@ int main(int argc, char **argv)
   { // Bis array fertig sortiert wurde
     while (positiony <= 10)
     { // eine Runde
-      if (compare(array[positionx], array[positiony]) != 0)
+      if (compare(array[positionx], array[positiony]) != 1)
       {
         positionx++;
         positiony++;
